@@ -1,8 +1,6 @@
 <?php
-// Exécution du fichier de création du fichier matchs.json
-include 'export_matchs.php';
 // Chargement des données JSON
-$matchs = json_decode(file_get_contents('json/matchs.json'), true);
+$matchs = json_decode(file_get_contents('http://localhost/NoSQL/NoSQL_Project/export_matchs.php'), true);
 
 // Dernier match (le premier dans l'ordre du tableau)
 $dernierMatch = $matchs[0];

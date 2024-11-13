@@ -29,6 +29,6 @@ $stmt->execute();
 $matchs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Sauvegarde des données au format JSON
-file_put_contents('json/matchs.json', json_encode($matchs, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+echo (json_encode($matchs, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
 ?>
