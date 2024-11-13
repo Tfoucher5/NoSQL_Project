@@ -23,6 +23,7 @@ $stmt = $pdo->prepare("
     JOIN equipes AS equipes_domicile ON matchs.domicile = equipes_domicile.id
     JOIN equipes AS equipes_exterieur ON matchs.exterieur = equipes_exterieur.id
     JOIN championnats ON matchs.championnat_id = championnats.id
+    LIMIT 10
 ");
 $stmt->execute();
 
